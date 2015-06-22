@@ -1,9 +1,12 @@
 <% provide(:title, "Home") %>
-<h1>Home page is under construction</h1>
-<p>
-We will notify you when it will  be working till then enjoy songs at
-<a href="https://www.gaana.com">Gaana.com</a>.
-For help click on <a href="http://localhost:3000/static_pages/help">this</a>
-<br />
-<a href="http://localhost:3000/static_pages/about">About</a>.
- </p>
+
+<div class="center jumbotron">
+<h1>Welcome to the Sample App</h1>
+<h2>
+This is the home page for the
+<%= link_to "Ruby on Rails Tutorial" , "https://www.railstutorial.org"%>
+sample application.
+</h2>
+<%= link_to "Sign up now!", signup_path , class: "btn btn-lg btn-primary" %>
+</div>
+<%= link_to image_tag("rails.png", alt: "Rails logo"), 'https://rubyonrails.org' %>
