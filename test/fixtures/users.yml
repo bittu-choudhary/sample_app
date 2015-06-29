@@ -2,3 +2,8 @@ dinesh:
     name: Dinesh Choudhary
     email: dinesh@moldedbits.com
     password_digest: <%= User.digest('dinesh') %>
+
+gunjan:
+    name: Gunjan Choudhary
+    email: gunjan@moldedbits.com
+    password_digest: <%= User.digest('gunjan') %>
