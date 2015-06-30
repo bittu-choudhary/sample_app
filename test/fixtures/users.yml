@@ -2,6 +2,7 @@ dinesh:
     name: Dinesh Choudhary
     email: dinesh@moldedbits.com
     password_digest: <%= User.digest('dinesh') %>
+    admin: true
 
 gunjan:
     name: Gunjan Choudhary

@@ -4,7 +4,9 @@
 <%= will_paginate %>
 
 <ol class="users">
-	<% render @users %>
+	<% @users.each do |user| %>
+		<%= render user %>
+	<% end %>
 </ol>
 <div>
 <%= will_paginate %>
