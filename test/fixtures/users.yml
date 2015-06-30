@@ -7,3 +7,20 @@ gunjan:
     name: Gunjan Choudhary
     email: gunjan@moldedbits.com
     password_digest: <%= User.digest('gunjan') %>
+
+anuj:
+    name: Anuj
+    Email: anuj@moldedbits.com
+    password_digest: <%= User.digest('anuj') %>
+
+abhishek:
+    name: Abhishek
+    email: abhishek@moldedbits.com
+    password_digest: <%= User.digest('abhishek') %>
+
+<% 30.times do |n| %>
+user_<%= n %>:
+    name: <%= "User #{n}" %>
+    email: <%= "user-#{n}@example.com" %>
+    password_digest: <%= User.digest('password') %>
+ <% end %>
