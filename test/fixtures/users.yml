@@ -3,25 +3,35 @@ dinesh:
     email: dinesh@moldedbits.com
     password_digest: <%= User.digest('dinesh') %>
     admin: true
+    activated: true
+    activated_at: <%= Time.zone.now %>
 
 gunjan:
     name: Gunjan Choudhary
     email: gunjan@moldedbits.com
     password_digest: <%= User.digest('gunjan') %>
+    activated: true
+    activated_at: <%= Time.zone.now %>
 
 anuj:
     name: Anuj
     Email: anuj@moldedbits.com
     password_digest: <%= User.digest('anuj') %>
+    activated: true
+    activated_at: <%= Time.zone.now %>
 
 abhishek:
     name: Abhishek
     email: abhishek@moldedbits.com
     password_digest: <%= User.digest('abhishek') %>
+    activated: true
+    activated_at: <%= Time.zone.now %>
 
 <% 30.times do |n| %>
 user_<%= n %>:
     name: <%= "User #{n}" %>
     email: <%= "user-#{n}@example.com" %>
     password_digest: <%= User.digest('password') %>
+    activated: true
+    activated_at: <%= Time.zone.now %>
  <% end %>
