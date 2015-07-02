@@ -20,6 +20,7 @@ class UsersController < ApplicationController
 
   def show
   	@user = User.find(params[:id])
+    @microposts = @user.microposts.paginate(page: params[:page])
   end
 
   def create
@@ -29,7 +30,7 @@ class UsersController < ApplicationController
   		flash[:info] = "Please check your email to activate your account."
   		redirect_to root_url
 	else
-		render 'new' 
+		render 'new'
   	end
   end
 
@@ -50,7 +51,7 @@ class UsersController < ApplicationController
   private
 
   	def user_params
-  		params.require(:user).permit(:name, :email, 
+  		params.require(:user).permit(:name, :email,
   			:password, :password_confirmation)
   	end
 
