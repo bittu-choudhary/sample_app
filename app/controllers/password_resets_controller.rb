@@ -40,7 +40,7 @@ class PasswordResetsController < ApplicationController
     params.require(:user).permit(:password, :password_confirmation)
   end
 
-  def paswword_blank?
+  def password_blank?
     params[:user][:password].blank?
   end
 
