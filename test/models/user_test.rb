@@ -73,4 +73,15 @@ test "authenticated? should return false for a user with nil digest" do
      @user.destroy
    end
  end
+
+ test "should follow and unfollow a user" do
+   dinesh = users(:dinesh)
+   gunjan = users(:gunjan)
+   assert_not dinesh.following?(gunjan)
+   dinesh.follow(gunjan)
+   assert dinesh.following?(gunjan)
+   assert gunjan.followers.include?(dinesh)
+   dinesh.unfollow(gunjan)
+   assert_not dinesh.following?(gunjan)
+ end
 end
