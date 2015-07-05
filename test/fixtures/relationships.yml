@@ -1,1 +1,15 @@
-#empty
+one:
+  follower: dinesh
+  followed: anuj
+
+two:
+  follower: dinesh
+  followed: abhishek
+
+three:
+  follower: anuj
+  followed: dinesh
+
+four:
+  follower: gunjan
+  followed: dinesh

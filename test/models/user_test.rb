@@ -84,4 +84,25 @@ test "authenticated? should return false for a user with nil digest" do
    dinesh.unfollow(gunjan)
    assert_not dinesh.following?(gunjan)
  end
+
+ test "feed should have the right posts" do
+   dinesh = users(:dinesh)
+   gunjan = users(:gunjan)
+   anuj = users(:anuj)
+
+   # Posts from followed user
+   anuj.microposts.each do |post_following|
+     assert dinesh.feed.include?(post_following)
+   end
+
+   #posts from self
+   dinesh.microposts.each do |post_self|
+     assert dinesh.feed.include?(post_self)
+   end
+
+   # Posts from unfollowed user
+   gunjan.microposts.each do |post_unfollowed|
+     assert_not dinesh.feed.include?(post_unfollowed)
+   end
+ end
 end
